@@ -1,0 +1,24 @@
+{
+    "name": "gedex/janrain-cli",
+    "require": {
+        "wp-cli/php-cli-tools": "0.10.4",
+        "gedex/janrain-api": "0.1.0",
+        "symfony/console": "2.7.2",
+        "symfony/dependency-injection": "2.7.2"
+    },
+    "autoload": {
+        "psr-0": {
+            "Janrain\\CLI": "src"
+        }
+    },
+    "bin": [
+        "bin/jcli"
+    ],
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Akeda Bagus",
+            "email": "admin@gedex.web.id"
+        }
+    ]
+}
