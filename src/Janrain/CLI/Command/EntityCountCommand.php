@@ -15,7 +15,7 @@ class EntityCountCommand extends AbstractCommand {
 			->setName( 'entity:count' )
 			->setDescription( 'Retrieve number of records of entity type' )
 			->setDefinition( array(
-				new InputOption( 'type', 't', InputOption::VALUE_REQUIRED, 'The entityType of the entity.' ),
+				new InputOption( 'type', 't', InputOption::VALUE_REQUIRED, 'The type of the entity.' ),
 			) )
 			->addArgument(
 				'filter',

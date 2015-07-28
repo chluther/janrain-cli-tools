@@ -19,7 +19,7 @@ class EntityFillUnsubKeyCommand extends AbstractCommand {
 			->setName( 'entity:fill-unsub-key' )
 			->setDescription( 'Fill empty unsubscribe key on records' )
 			->setDefinition( array(
-				new InputOption( 'type', 't', InputOption::VALUE_REQUIRED, 'The entityType of the entity.' ),
+				new InputOption( 'type', 't', InputOption::VALUE_REQUIRED, 'The type of the entity.' ),
 			) )
 			->addArgument(
 				'filter',

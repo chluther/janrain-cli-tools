@@ -17,7 +17,7 @@ class EntityFindCommand extends AbstractCommand {
 			->setName( 'entity:find' )
 			->setDescription( 'Find entity' )
 			->setDefinition( array(
-				new InputOption( 'type', 't', InputOption::VALUE_REQUIRED, 'The entityType of the entity.' ),
+				new InputOption( 'type', 't', InputOption::VALUE_REQUIRED, 'The type of the entity.' ),
 				new InputOption( 'attributes', 'attrs', InputOption::VALUE_OPTIONAL, 'This is a JSON array of attributes. This works the same as attribute_name, only returning the specified attributes instead of the entire record.' ),
 				new InputOption( 'max', 'm', InputOption::VALUE_OPTIONAL, 'The maximum number of results to be returned. The default value is 100. The highest value you can enter is 10000.' ),
 				new InputOption( 'first', 'f', InputOption::VALUE_OPTIONAL, 'Changes the first result displayed by the list to the next number specified. For example: changing this value to 3 will display the 4th user record. The default value is 1.' ),

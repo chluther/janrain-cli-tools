@@ -15,7 +15,7 @@ class EntityUpdateCommand extends AbstractCommand {
 			->setName( 'entity:update' )
 			->setDescription( 'Update an entity' )
 			->setDefinition( array(
-				new InputOption( 'type', 't', InputOption::VALUE_REQUIRED, 'The entityType of the entity.' ),
+				new InputOption( 'type', 't', InputOption::VALUE_REQUIRED, 'The type of the entity.' ),
 			) )
 			->addArgument(
 				'selector',

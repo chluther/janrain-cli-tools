@@ -16,7 +16,7 @@ class EntityViewCommand extends AbstractCommand {
 			->setName( 'entity:view' )
 			->setDescription( 'Retrieve a single entity' )
 			->setDefinition( array(
-				new InputOption( 'type', 't', InputOption::VALUE_REQUIRED, 'The entityType of the entity.' ),
+				new InputOption( 'type', 't', InputOption::VALUE_REQUIRED, 'The type of the entity.' ),
 				new InputOption( 'attributes', 'attrs', InputOption::VALUE_OPTIONAL, 'This is a JSON array of attributes. This works the same as attribute_name, only returning the specified attributes instead of the entire record.' ),
 			) )
 			->addArgument(
