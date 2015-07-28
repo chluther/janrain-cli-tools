@@ -48,7 +48,7 @@ EOT
 			$filter .= ' AND (' . $input->getArgument( 'filter' ) . ')';
 		}
 
-		// Total count of empty / null rdm_unsubscribe_key.
+		// Total count records with unsubscribe attribute value empty / null.
 		$total_count = $this->getEntityCount( $type, $filter );
 
 		$output->writeln( sprintf( '<info>Found %d records where "%s"</info>', $total_count, $filter ) );
