@@ -29,6 +29,8 @@ class ApplicationFactory {
 			new Command\ConfigCommand(),
 
 			new Command\EntityCountCommand(),
+			new Command\EntityCreateCommand(),
+			new Command\EntityDeleteCommand(),
 			new Command\EntityFindCommand(),
 			new Command\EntityFillUnsubKeyCommand(),
 			new Command\EntityUpdateCommand(),
