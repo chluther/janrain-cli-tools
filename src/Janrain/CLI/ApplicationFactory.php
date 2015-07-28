@@ -26,6 +26,8 @@ class ApplicationFactory {
 
 	protected function getDefaultCommands() {
 		return [
+			new Command\ClientListCommand(),
+
 			new Command\ConfigCommand(),
 
 			new Command\EntityCountCommand(),
