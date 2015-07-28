@@ -18,7 +18,7 @@ class EntityFindCommand extends AbstractCommand {
 			->setDescription( 'Find entity' )
 			->setDefinition( array(
 				new InputOption( 'type', 't', InputOption::VALUE_REQUIRED, 'The type of the entity.' ),
-				new InputOption( 'attributes', 'attrs', InputOption::VALUE_OPTIONAL, 'This is a JSON array of attributes. This works the same as attribute_name, only returning the specified attributes instead of the entire record.' ),
+				new InputOption( 'attributes', 'attrs', InputOption::VALUE_OPTIONAL, 'Comma separated attributes. To limit output attributes.' ),
 				new InputOption( 'max', 'm', InputOption::VALUE_OPTIONAL, 'The maximum number of results to be returned. The default value is 100. The highest value you can enter is 10000.' ),
 				new InputOption( 'first', 'f', InputOption::VALUE_OPTIONAL, 'Changes the first result displayed by the list to the next number specified. For example: changing this value to 3 will display the 4th user record. The default value is 1.' ),
 				new InputOption( 'sort_on', 's', InputOption::VALUE_OPTIONAL, 'Comma separated of attributes to sort by. The default is ascending order, which can be reversed by including a minus sign (-) directly before the attribute name.' ),
@@ -60,6 +60,10 @@ Adding more than one condition to a filter:
 Limit results:
 
 	<comment>%command.full_name% 'birthday is not null' -m 500</comment>
+
+Specify output attributes with <info>--attributes=id,uuid,email,primaryAddress.phone</info>:
+
+	<comment>%command.full_name% 'birthday is not null' -m 500 --attributes=id,uuid,email,primaryAddress.phone</comment>
 
 Sort result by lastUpdated descendingly:
 

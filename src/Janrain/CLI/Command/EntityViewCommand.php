@@ -17,7 +17,7 @@ class EntityViewCommand extends AbstractCommand {
 			->setDescription( 'Retrieve a single entity' )
 			->setDefinition( array(
 				new InputOption( 'type', 't', InputOption::VALUE_REQUIRED, 'The type of the entity.' ),
-				new InputOption( 'attributes', 'attrs', InputOption::VALUE_OPTIONAL, 'This is a JSON array of attributes. This works the same as attribute_name, only returning the specified attributes instead of the entire record.' ),
+				new InputOption( 'attributes', 'attrs', InputOption::VALUE_OPTIONAL, 'Comma separated attributes. To limit output attributes.' ),
 			) )
 			->addArgument(
 				'selector',
@@ -37,7 +37,7 @@ Retrieve user data with uuid <info>c0613105-f632-41ce-80eb-56668df7fc83</info>:
 
 	<comment>%command.full_name% uuid=c0613105-f632-41ce-80eb-56668df7fc83</comment>
 
-Limit the output with <info>--attributes=id,uuid,email,primaryAddress.phone</info>:
+Limit the output attributes with <info>--attributes=id,uuid,email,primaryAddress.phone</info>:
 
 	<comment>%command.full_name% uuid=c0613105-f632-41ce-80eb-56668df7fc83 --attributes=id,uuid,email,primaryAddress.phone</comment>
 EOT
