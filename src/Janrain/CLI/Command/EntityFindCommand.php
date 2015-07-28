@@ -55,7 +55,7 @@ Adding more than one condition to a filter:
 
 	<comment>%command.full_name% "gender='male' and birthday > '2012-06-13 18:02:56.012122 +0000'</comment>
 
-	<comment>%command.full_name% 'age > 25 and age < 50 and gender="female"'</comment>
+	<comment>%command.full_name% "age > 25 and age < 50 and gender='female'"</comment>
 
 Limit results:
 
