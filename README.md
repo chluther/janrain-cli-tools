@@ -27,6 +27,29 @@ mv jcli.phar /usr/local/bin/jcli
 
 Now you can run `jcli` from anywhere.
 
+## Configure
+
+The first time you need to do is configure your `jcli`. By default `client_id`,
+`client_secret`, and `base_url` are empty:
+
+```
+jcli config -l
+```
+
+These are required config keys that need to be set. Set it with:
+
+```
+jcli config client_id YOUR_CLIENT_ID
+jcli config client_secret YOUR_CLIENT_SECRET
+jcli config base_url YOUR_BASE_URL
+```
+
+Additionaly you can set `default_type` to set default entity type. Now, everytime
+you run command you can ignore `-t` option.
+
+```
+jcli config default_type user
+```
 
 ## Commands
 
