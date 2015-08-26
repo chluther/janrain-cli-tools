@@ -119,3 +119,12 @@ jcli entity:view uuid=c0613105-f632-41ce-80eb-56668df7fc83
 ```
 jcli entity:update id=999 givenName=Akeda displayName="Akeda Bagus"
 ```
+
+### Update all empty ETUID attributes
+
+```
+jcli entity:fill-unsub-key
+```
+You may get API rate limit from Janrain. If so, the jcli will output the
+message. When that happens, you can re-run `jcli
+entity:fill-unsub-key` again for the remaining records.
