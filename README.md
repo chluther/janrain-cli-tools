@@ -11,7 +11,7 @@ cd jcli
 composer install
 ```
 
-Done. You can run via `./bin/jcli` from current directory.
+You can run via `./bin/jcli` from current directory.
 
 If you want to build the phar file:
 
@@ -44,7 +44,7 @@ jcli config client_secret YOUR_CLIENT_SECRET
 jcli config base_url YOUR_BASE_URL
 ```
 
-Additionaly you can set `default_type` to set default entity type. Now, everytime
+Additionally you can set `default_type` to set default entity type. Now, every time
 you run command you can ignore `-t` option.
 
 ```
