@@ -1,9 +1,18 @@
 jcli
 ====
 
-Janrain CLI.
+CLI ools for interacting with Janrain.
 
-## Install from source
+* [Install From Source](#install)
+* [Configure](#config)
+* [Commands](#commands)
+* [Find Records](#find)
+* [Count Records](#count)
+* [View a Single Record](#view-single)
+* [Update a Record](#udpate)
+* [Update All Empty ETUID Attributes](#etuid)
+
+## Install From Source <a name="install"></a>
 
 ```
 git clone git@github.com:xwp/janrain-cli-tools.git jcli
@@ -27,7 +36,7 @@ mv jcli.phar /usr/local/bin/jcli
 
 Now you can run `jcli` from anywhere.
 
-## Configure
+## Configure <a name="config"></a>
 
 The first time you need to do is configure your `jcli`. By default `client_id`,
 `client_secret`, and `base_url` are empty:
@@ -51,7 +60,7 @@ you run command you can ignore `-t` option.
 jcli config default_type user
 ```
 
-## Commands
+## Commands <a name="commands"></a>
 
 ```
 $ ./bin/jcli
@@ -83,7 +92,7 @@ Available commands:
   type:list              Retrieve all entity types
 ```
 
-### Find records
+### Find Records <a name="find"></a>
 
 ```
 jcli entity:find "gender != 'male'"
@@ -101,26 +110,26 @@ Specifying offset (start from 5th record):
 jcli entity:find "gender != 'male'" -m 10 -f 5
 ```
 
-### Count records
+### Count Records <a name="count"></a>
 
 ```
 jcli entity:count "gender != 'male' AND birthday is not null"
 ```
 
-### View a single record
+### View a Single Record <a name="view-single"></a>
 
 ```
 jcli entity:view id=999
 jcli entity:view uuid=c0613105-f632-41ce-80eb-56668df7fc83
 ```
 
-### Update a record
+### Update a Record <a name="update"></a>
 
 ```
 jcli entity:update id=999 givenName=Akeda displayName="Akeda Bagus"
 ```
 
-### Update all empty ETUID attributes
+### Update All Empty ETUID Attributes <a name="etuid"></a>
 
 ```
 jcli entity:fill-unsub-key
